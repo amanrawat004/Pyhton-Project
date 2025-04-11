@@ -138,7 +138,7 @@ print(df.groupby('Owner_of_vehicle')['Accident_severity'].value_counts())
 print(df.groupby('Vehicle_driver_relation')['Accident_severity'].value_counts())
 
 # ----------------- Visualization Section ------------------
-
+#Problem Statement 5 (Demographics - Seaborn/Matplotlib)
 # Encode values for plots
 df['Severity_encoded'] = df['Accident_severity'].map({'Slight Injury': 1, 'Serious Injury': 2, 'Fatal Injury': 3})
 df['Age_numeric'] = df['Age_band_of_driver'].map({'Under 18': 15, '18-30': 24, '31-50': 40, 'Over 51': 60, 'Unknown': None})
@@ -186,7 +186,7 @@ sns.stripplot(x='Type_of_vehicle', y='Severity_encoded', data=filtered_df, jitte
 plt.title("Strip Plot: Severity Distribution in Top 5 Vehicle Types")
 plt.xticks(rotation=45)
 plt.show()
-
+#Problem Statement 6 (Road Conditions - Seaborn/Matplotlib)
 # PAIR PLOT
 pair_df = df[['Age_numeric', 'Severity_encoded']].dropna()
 sns.pairplot(pair_df)
