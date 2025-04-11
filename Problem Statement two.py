@@ -123,6 +123,20 @@ print(df.groupby('Light_conditions')['Accident_severity'].value_counts())
 # 4. Road alignment vs severity
 print(df.groupby('Road_allignment')['Accident_severity'].value_counts())
 
+# Problem Statement 4: Vehicle and Movement Patterns
+
+# 1. Vehicle movement vs severity
+print(df.groupby('Vehicle_movement')['Accident_severity'].value_counts())
+
+# 2. Type of vehicle vs cause of accident
+print(df.groupby('Type_of_vehicle')['Cause_of_accident'].value_counts())
+
+# 3. Owner of vehicle vs severity
+print(df.groupby('Owner_of_vehicle')['Accident_severity'].value_counts())
+
+# 4. Vehicle driver relation vs severity
+print(df.groupby('Vehicle_driver_relation')['Accident_severity'].value_counts())
+
 # ----------------- Visualization Section ------------------
 
 # Encode values for plots
