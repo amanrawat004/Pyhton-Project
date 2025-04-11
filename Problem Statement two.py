@@ -110,6 +110,19 @@ print(df.groupby('Driving_experience')['Accident_severity'].value_counts())
 # 4. Driver age group vs type of collision
 print(df.groupby('Age_band_of_driver')['Type_of_collision'].value_counts())
 
+#Problem Statement 3: Road and Environmental Conditions
+# 1. Road surface type vs severity
+print(df.groupby('Road_surface_type')['Accident_severity'].value_counts())
+
+# 2. Weather conditions vs severity
+print(df.groupby('Weather_conditions')['Accident_severity'].value_counts())
+
+# 3. Light conditions vs severity
+print(df.groupby('Light_conditions')['Accident_severity'].value_counts())
+
+# 4. Road alignment vs severity
+print(df.groupby('Road_allignment')['Accident_severity'].value_counts())
+
 # ----------------- Visualization Section ------------------
 
 # Encode values for plots
