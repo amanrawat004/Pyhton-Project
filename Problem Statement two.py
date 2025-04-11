@@ -78,6 +78,25 @@ print(df.isnull().sum())
 df.to_csv(r'C:\Users\abhay\Downloads\kaam\RTA Dataset.csv', index=False)
 print("\nData cleaning complete. Cleaned data saved to 'RTA Dataset.csv'")
 
+#Problem Statement 1: Accident Severity and Demographics
+
+# 1. Frequency of each severity type
+print(df['Accident_severity'].value_counts())
+
+# 2. Average age of victims per severity
+age_map = {
+    'Under 18': 15, '18-30': 24, '31-50': 40,
+    'Over 51': 60, 'Unknown': None
+}
+df['Age_band_numeric'] = df['Age_band_of_casualty'].map(age_map)
+print(df.groupby('Accident_severity')['Age_band_numeric'].mean())
+
+# 3. Severity vs vehicle type
+print(df.groupby('Type_of_vehicle')['Accident_severity'].value_counts())
+
+# 4. Severity across road user categories
+print(df.groupby('Casualty_class')['Accident_severity'].value_counts())
+
 # ----------------- Visualization Section ------------------
 
 # Encode values for plots
