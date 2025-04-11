@@ -97,6 +97,19 @@ print(df.groupby('Type_of_vehicle')['Accident_severity'].value_counts())
 # 4. Severity across road user categories
 print(df.groupby('Casualty_class')['Accident_severity'].value_counts())
 
+ #Problem Statement 2: Driver Demographics and Accident Types
+# 1. Driver sex vs accident severity
+print(df.groupby('Sex_of_driver')['Accident_severity'].value_counts())
+
+# 2. Education level vs accident severity
+print(df.groupby('Educational_level')['Accident_severity'].value_counts())
+
+# 3. Driving experience vs accident severity
+print(df.groupby('Driving_experience')['Accident_severity'].value_counts())
+
+# 4. Driver age group vs type of collision
+print(df.groupby('Age_band_of_driver')['Type_of_collision'].value_counts())
+
 # ----------------- Visualization Section ------------------
 
 # Encode values for plots
